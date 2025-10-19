@@ -20,21 +20,21 @@ El prorama utiliza Tres clases:
 
 **GstorComandos:**
 
-Es el encargado depreparar los comandos y parametros que recibiran y tartaran otras. Tiene dos metodos:
+Es el encargado de preparar los comandos y parametros que recibiran y tartaran otras. Tiene dos metodos:
 
-- *generar()*: Une los el cmando con el parametro al que se le aplicara.
+- *generar()*: Une el comando con el parametro que se le aplicara.
 
 - *separar()*: Separa las salidas de los procesos de *String* a array de String (*String[]*).
 
 **GestorProcesos**
 
-Es el encargado de ejecutar los procesos recoger sus salidas y enviarles datos extra a los mismos. Tiene tres metodos:
+Es el encargado de ejecutar los procesos, recoger sus salidas y enviarles datos extra a los mismos. Tiene tres metodos:
 
-- *lanzar()*: Lanza el proceso recogido en un array de String (*String[]*).
+- *lanzar()*: Lanza el proceso con el comando recogido en un array de String (*String[]*).
 
 - *obtenerSalida()*: Recoge la salida del proceso y la devuelve en forma de *String*.
 
-- *enviarDatos()*: Envia datos al proceso ya en ejecución.
+- *enviarDatos()*: Envia datos al proceso ya en ejecución mediante un array de String (*String[]*).
 
 **LanzadorProcesos**
 
