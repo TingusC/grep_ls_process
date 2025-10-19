@@ -12,8 +12,12 @@ public class Main {
     public static final String SEPARADOR= " ";
 
     public static void main(String[] args) throws IOException {
-        String ls = LanzadorProcesos.ejecutarLs(GestorComandos.generar(COMANDOS[0], RUTA));
-        String grep = LanzadorProcesos.ejecutarGrep(GestorComandos.generar(COMANDOS[1], PARAMETRO), ls);
+        String[] comandosLs = GestorComandos.generar(COMANDOS[0], RUTA);
+        String ls = LanzadorProcesos.ejecutarLs(comandosLs);
+
+        String[] comandosGrep = GestorComandos.generar(COMANDOS[1], PARAMETRO);
+        String grep = LanzadorProcesos.ejecutarGrep(comandosGrep, ls);
+        
         System.out.println(grep);
     }
 }
