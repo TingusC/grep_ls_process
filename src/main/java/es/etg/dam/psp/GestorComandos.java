@@ -8,4 +8,10 @@ public class GestorComandos {
 
         return ret;
     }
+
+    public static String[] separar(String salida)
+    {
+        String[] ret = salida.split(Main.SEPARADOR); 
+        return  ret;
+    }
 }
